@@ -39,7 +39,7 @@ const getExpenceMonth = function(am1, am2) {
 
 const getAccumulatedMonth = function(mon, amount) {
     return mon - amount;
-};
+}; 
 
 let accumulatedMonth = getAccumulatedMonth(money, getExpenceMonth(amount1,amount2));
 console.log('accumulatedMonth: ', accumulatedMonth);
