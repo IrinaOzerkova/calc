@@ -1,18 +1,18 @@
 'uses strict';
 
 let isNumber = function(n) {
-    return !isNaN(parseFloat(n)) && isFinite(n);
+    return (!isNaN(parseFloat(n)) && isFinite(n));
 };
 
 let isEmpty = function(s) {
-    return s ==='' || s === null;
+    return (s ==='' || s === null);
 };
 
 let money,
     start = function() {
         do {
         money = prompt('Ваш месячный доход?');
-        }while (!isNumber(money)); 
+        } while (!isNumber(money)); 
     };
 
 start();
@@ -126,3 +126,36 @@ for (let i = 0; i < appData.addExpenses.length; i++) {
     appData.addExpenses[i] = s;
 }
 console.log(appData.addExpenses.join(', '));
+
+let buttonCalc = document.getElementById('start');
+console.log('buttonCalc: ', buttonCalc);
+
+let buttonPlus1 = document.getElementsByTagName('button')[0];
+console.log('buttonPlus1: ', buttonPlus1);
+
+let buttonPlus2 = document.getElementsByTagName('button')[1];
+console.log('buttonPlus2: ', buttonPlus2);
+
+let checkbox = document.querySelector('#deposit-check');
+console.log('checkbox: ', checkbox);
+
+let additionalIncomeItem = document.querySelectorAll('.additional_income-item');
+console.log('additionalIncomeItem: ', additionalIncomeItem);
+
+let budgetMonthValue = document.getElementsByClassName('.budget_month-value');
+let budgetDayValue = document.getElementsByClassName('.budget_day-value');
+let expensesMonthValue = document.getElementsByClassName('.expenses_month-value');
+let additionalIncomeValue = document.getElementsByClassName('.additional_income-value');
+let additionalExpensesValue = document.getElementsByClassName('.additional_expenses-value');
+let incomePeriodValue = document.getElementsByClassName('.income_period-value');
+let targetMonthValue = document.getElementsByClassName('.target_month-value');
+let salaryAmount = document.querySelector('.salary-amount');
+let incomeTitle = document.querySelector('.income-title');
+let incomeAmount = document.querySelector('.income-amount');
+let additionalIncomeItem1 = document.querySelector('.additional_income-item')[0];
+let additionalIncomeItem2= document.querySelector('.additional_income-item')[1];
+let expensesTitle = document.querySelector('.expenses-title');
+let expensesAmount = document.querySelector('.expenses-amount');
+let additionalExpensesItem = document.querySelector('.additional_expenses-item');
+let targetAmount = document.querySelector('.target-amount');
+let periodAelect = document.querySelector('.period-select');
